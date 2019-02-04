@@ -16,14 +16,12 @@ body {
 }
 
 #container{
-    border:1px solid red;
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
 .navigation {
-    border:1px solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,7 +53,6 @@ body {
 
 .titleSection{
     margin:auto;
-    border:1px solid red;
 }
 
 h1{
@@ -64,10 +61,50 @@ h1{
 }
 
 h2 {
+    text-align: center;
     color:white;
-    font-size: 2em;
+    font-size: 1em;
 }
 
+
+.about{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.about h3 {
+    font-size: 3em;
+    text-align: center;
+    color: rgb(33,36,50);
+}
+
+.about_info {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h4{
+   color: rgb(33,36,50);
+}
+
+.phone{
+    width: 350px;
+    height: 350px;
+}
+
+.services_info{
+    background-color: rgb(33,36,50);
+    height: 100vh;
+}
+
+.together_info {
+    height: 50vh;
+}
 
 canvas {
     background: rgb(33,36,50);
