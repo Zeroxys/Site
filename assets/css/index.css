@@ -155,7 +155,7 @@ h4{
     flex-direction: column;
 }
 
-.form form input {
+.form form input[type='text'] {
     margin-bottom: 20px;
     padding-bottom: 20px;
     width: 100%;
@@ -168,36 +168,81 @@ h4{
     color: rgb(33,36,50);
     border: 0;
     outline: 0;
-    border-bottom: 1px solid 
+    border-bottom: 1px solid rgb(33,36,50);
 }
 
-.form form .form_submit {
+.form_submit{
+    border:2px solid red; 
     outline: none;
+    border-radius: 50%;
+    position: relative;
+    top:50px;
+}
+
+.form_submit::before{
+    content: "Send";
+    color:white;
+    position: absolute;
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    float: right;
-    position: relative;
-    border: 0;
-    color:white;
-    background-color: rgb(33,36,50);
-}
-
-.form form .form_submit::after {
-    content: "Send";
-    color: rgb(33,36,50);;
-    font-size: 1.66rem;
+    font-size: 1.3rem;
     font-weight: 600;
     font-stretch: normal;
+    box-sizing: border-box;
+    background-color: rgb(33,36,50);
+    animation: pulse-dot 1.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
+}
+
+.form_submit::after {
+    content : '';
     position: relative;
-    top: calc(-50% - 14px);
-    display: inline-block;
-    margin-bottom: 0;
+    border:10px solid red;
+    left: calc(50% - 5px);
+}
+
+
+
+@keyframes pulse-ring {
+    0% {
+      transform: scale(.33);
+    }
+    80%, 100% {
+      opacity: 0;
+    }
+  }
+
+@keyframes pulse-dot {
+    0% {
+        transform: scale(.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+       transform: scale(.8);
+    }
+}  
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(33,36,50);
+    height: 30vh;
 }
 
 .footer_info {
-    background-color: rgb(33,36,50);
-    height: 30vh;
+    font-size: 1.3em;
+    color: white;
+    margin-bottom:30px;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
 }
 
 canvas {
